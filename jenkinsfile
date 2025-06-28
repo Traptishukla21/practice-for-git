@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('pull') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Traptishukla21/practice-for-git.git'
+            }
+        }
+    }
+}
