@@ -7,5 +7,20 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Traptishukla21/practice-for-git.git'
             }
         }
+        stage('build') {
+            steps {
+               echo 'Build Success.'
+            }
+        }
+        stage('test') {
+            steps {
+              sh 'echo "Test success"'
+            }
+        }
+        stage('deploy') {
+            steps {
+               sh 'echo "Deploy success"'
+            }
+        }
     }
 }
